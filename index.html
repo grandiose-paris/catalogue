@@ -324,7 +324,7 @@ body{cursor:auto!important}
 #G .prod-sec::after{display:none}
 #G .prod-sec>*{position:relative;z-index:1}
 
-#G .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+#G .pgrid{display:grid;grid-template-columns:repeat(3,1fr)!important;gap:0}
 
 /* Card produit */
 #G .pc{
@@ -419,8 +419,7 @@ body{cursor:auto!important}
 #G .vsec::after{display:none}
 #G .vsec>*{position:relative;z-index:1}
 
-#G .vgrid{display:grid;grid-template-columns:repeat(3,1fr)!important;
-  gap:0;margin-bottom:28px}
+#G .vgrid{display:grid;grid-template-columns:repeat(3,1fr)!important;gap:0;margin-bottom:28px}
 #G .vc{background:var(--wh);overflow:hidden;
   border:1px solid rgba(20,18,16,0.07);border-top:none;border-left:none;
   transition:box-shadow .45s,transform .45s cubic-bezier(.22,1,.36,1)}
@@ -676,7 +675,7 @@ body{cursor:auto!important}
 #G .vi-sec-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(15px,1.6vw,20px);color:var(--mi);line-height:1.6}
 #G .vi-sec-rule{width:0;height:1px;margin:20px 0 0 auto;background:linear-gradient(270deg,var(--g),transparent);transition:width 1.4s cubic-bezier(.22,1,.36,1)}
 #G .vi-sec-rule.on{width:80px}
-#G .vi-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(200,168,75,0.12);padding:1px}
+#G .vi-photo-grid{display:grid;grid-template-columns:repeat(3,1fr)!important;gap:1px;background:rgba(200,168,75,0.12);padding:1px}
 #G .vi-card{background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .5s}
 #G .vi-card:hover{box-shadow:0 16px 56px rgba(20,18,16,0.1);z-index:2;position:relative}
 #G .vi-photo{position:relative;background:var(--cr);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden}
@@ -947,7 +946,7 @@ body{cursor:auto!important}
   #G .lsec .pi{ aspect-ratio:1/1; padding:10px }
 
   /* ── Volailles ── */
-  #G .vgrid{ grid-template-columns:repeat(3,1fr) }
+  #G .vgrid{ grid-template-columns:repeat(3,1fr) !important }
   #G .vi{ padding:10px }
   #G .vb{ padding:10px 12px 14px }
   #G .vn{ font-size:11px; letter-spacing:1px; line-height:1.4 }
@@ -958,7 +957,7 @@ body{cursor:auto!important}
   #G .vi-sec-head{ grid-template-columns:1fr; padding:44px 16px 24px; gap:14px }
   #G .vi-sec-right{ text-align:left }
   #G .vi-sec-rule{ margin-left:0 }
-  #G .vi-photo-grid{ grid-template-columns:repeat(3,1fr) }
+  #G .vi-photo-grid{ grid-template-columns:repeat(3,1fr) !important }
   #G .vi-name{ font-size:10px }
   #G .vi-origin{ font-size:12px }
   #G .vi-desc{ font-size:11px }
@@ -1436,12 +1435,13 @@ body{cursor:auto!important}
       <div class="vb">
         <div class="vn"><span data-i18n="vn-v12">CAILLE</span></div>
       </div>
-    
+    </div>
     <div class="vc rv-s">
       <div class="vi"><img src="https://cdn.shopify.com/s/files/1/1591/3607/files/Sans_titre-2.png?v=1775810679" alt="POULET DE BRESSE PAC"></div>
       <div class="vb">
         <div class="vn"><span>POULET DE BRESSE PAC</span></div>
       </div>
+    </div>
     </div>
   </div>
   <p class="orig rv"><span data-i18n="origine">ORIGINE FRANCE · ARDÈCHE · NORMANDIE · GERS</span></p>
