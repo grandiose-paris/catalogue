@@ -980,6 +980,120 @@ body{cursor:auto!important}
   .g-contact-panel{ width:100%; padding:44px 20px 28px }
   .g-contact-title{ font-size:26px }
 }
+
+/* ═══ CONTACT REDESIGN ═══ */
+#G .csec-redesign{
+  display:flex;flex-direction:column;
+  border-top:1px solid rgba(200,168,75,0.2);
+}
+#G .csec-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:32px 72px;
+  border-bottom:1px solid rgba(200,168,75,0.12);
+  background:var(--cr2);
+}
+#G .csec-top-logo img{
+  height:56px;width:auto;object-fit:contain;
+}
+#G .csec-top-tagline{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:15px;
+  color:var(--mi);letter-spacing:0.5px;
+}
+#G .csec-top-halal{
+  font-family:'Jost',sans-serif;
+  font-size:8px;font-weight:500;letter-spacing:4px;
+  color:var(--g);border:1px solid rgba(200,168,75,0.3);
+  padding:6px 16px;
+}
+#G .csec-main{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:0;
+  background:var(--cr);
+}
+#G .csec-col{
+  padding:56px 48px;
+  border-right:1px solid rgba(200,168,75,0.12);
+}
+#G .csec-col:last-child{border-right:none}
+#G .csec-col-title{
+  font-family:'Jost',sans-serif;
+  font-size:8px;font-weight:500;letter-spacing:5px;
+  text-transform:uppercase;color:var(--g);
+  margin-bottom:28px;padding-bottom:16px;
+  border-bottom:1px solid rgba(200,168,75,0.2);
+}
+#G .csec-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:14px 0;
+  border-bottom:1px solid rgba(26,23,20,0.06);
+  text-decoration:none;transition:opacity .2s;
+}
+#G .csec-item:hover{opacity:0.7}
+#G .csec-item:last-child{border-bottom:none}
+#G .csec-item-icon{
+  width:32px;height:32px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(200,168,75,0.08);border-radius:50%;
+  margin-top:2px;
+}
+#G .csec-item-label{
+  font-family:'Jost',sans-serif;
+  font-size:8px;font-weight:500;letter-spacing:2px;
+  text-transform:uppercase;color:var(--g);margin-bottom:4px;
+}
+#G .csec-item-val{
+  font-size:13px;color:var(--ink);font-weight:300;
+}
+#G .csec-address-name{
+  font-family:'Jost',sans-serif;
+  font-size:9px;font-weight:500;letter-spacing:2px;
+  color:var(--ink);margin-bottom:8px;
+}
+#G .csec-address-line{
+  font-size:14px;color:var(--mi);font-weight:300;line-height:1.9;
+}
+#G .csec-website{
+  display:inline-block;margin-top:16px;
+  font-family:'Jost',sans-serif;
+  font-size:11px;font-weight:400;letter-spacing:1px;
+  color:var(--g);text-decoration:none;
+  transition:letter-spacing .3s;
+}
+#G .csec-website:hover{letter-spacing:2px}
+#G .csec-nav{
+  display:flex;flex-direction:column;gap:0;
+}
+#G .csec-nav-link{
+  font-family:'Jost',sans-serif;
+  font-size:11px;font-weight:300;letter-spacing:1px;
+  color:var(--mi);text-decoration:none;
+  padding:10px 0;
+  border-bottom:1px solid rgba(26,23,20,0.05);
+  transition:color .25s,padding-left .25s;
+}
+#G .csec-nav-link:last-child{border-bottom:none}
+#G .csec-nav-link:hover{color:var(--g);padding-left:6px}
+#G .csec-bottom{
+  padding:20px 72px;
+  background:var(--cr3);
+  display:flex;align-items:center;gap:16px;
+  font-family:'Jost',sans-serif;
+  font-size:10px;font-weight:300;letter-spacing:2px;
+  color:var(--mi);
+  border-top:1px solid rgba(200,168,75,0.12);
+}
+#G .csec-bottom-sep{color:var(--g)}
+
+/* Mobile contact redesign */
+@media(max-width:768px){
+  #G .csec-top{flex-direction:column;gap:16px;padding:24px 20px;text-align:center}
+  #G .csec-top-tagline{font-size:13px}
+  #G .csec-main{grid-template-columns:1fr}
+  #G .csec-col{padding:32px 20px;border-right:none;border-bottom:1px solid rgba(200,168,75,0.12)}
+  #G .csec-col:last-child{border-bottom:none}
+  #G .csec-bottom{padding:16px 20px;flex-direction:column;gap:6px;text-align:center}
+}
 </style>
 
 <div id="G" class="fr">
@@ -992,7 +1106,7 @@ body{cursor:auto!important}
         <span data-i18n="contact-btn">Nous Contacter</span>
       </button>
     </div>
-    <a href="/" class="nl-logo">
+    <a href="https://grandiose-paris.github.io/catalogue/" class="nl-logo">
       <img src="https://cdn.shopify.com/s/files/1/1591/3607/files/2_9c2b8ad6-bddf-4585-8c6b-08f099622683.png?v=1773385966" alt="Grandiose Paris">
     </a>
     <div class="nl-right">
@@ -1373,20 +1487,78 @@ body{cursor:auto!important}
 
 <!-- ═══ CONTACT ═══ -->
 <section class="csec" id="gco">
-  <div class="csec-inner">
-    <div class="csec-bg">G</div>
-    <div class="ccard rv">
-      <!-- Logo image au lieu du texte -->
-      <div class="ccard-logo">
+  <div class="csec-redesign">
+    <!-- TOP BAR -->
+    <div class="csec-top">
+      <div class="csec-top-logo">
         <img src="https://cdn.shopify.com/s/files/1/1591/3607/files/2_9c2b8ad6-bddf-4585-8c6b-08f099622683.png?v=1773385966" alt="Grandiose Paris">
       </div>
-      <div class="crule"></div>
-      <div class="cgrid">
-        <div><div class="clbl">TÉLÉPHONE</div><div class="cval"><a href="tel:+33649332713">+33 6 49 33 27 13</a></div></div>
-        <div><div class="clbl">EMAIL</div><div class="cval"><a href="/cdn-cgi/l/email-protection#e685898892878592a681948788828f899583cb81879592948988898b8f83c885898b"><span class="__cf_email__" data-cfemail="6c0f0302180d0f182c0b1e0d020805031f09410b0d1f181e030203010509420f0301">[email&#160;protected]</span></a></div></div>
-        <div><div class="clbl">WEBSITE</div><div class="cval"><a href="https://www.grandioseparis.com" target="_blank">www.grandioseparis.com</a></div></div>
-        <div><div class="clbl">ADRESSE</div><div class="cval">58 rue de Monceau<br>75008 Paris, France</div></div>
+      <div class="csec-top-tagline">
+        <span>Charcuterie d'Émotions · Paris · Hôtellerie &amp; Restauration</span>
       </div>
+      <div class="csec-top-halal">
+        <span>✦ CERTIFIÉ HALAL</span>
+      </div>
+    </div>
+    <!-- MAIN GRID -->
+    <div class="csec-main">
+      <div class="csec-col">
+        <div class="csec-col-title">Contact</div>
+        <a href="tel:+33649332713" class="csec-item">
+          <div class="csec-item-icon">
+            <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M3 3a1 1 0 011-1h2.5a1 1 0 011 1l1 4a1 1 0 01-.5.866L6.5 9a11 11 0 005.5 5.5l1.134-1.5A1 1 0 0114 12.5l4 1a1 1 0 011 1V17a1 1 0 01-1 1A16 16 0 013 3z" stroke="#C8A84B" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <div class="csec-item-label">Téléphone</div>
+            <div class="csec-item-val">+33 6 49 33 27 13</div>
+          </div>
+        </a>
+        <a href="mailto:info@grandiose-gastronomie.com" class="csec-item">
+          <div class="csec-item-icon">
+            <svg viewBox="0 0 20 16" fill="none" width="16" height="14"><rect x="1" y="1" width="18" height="14" rx="2" stroke="#C8A84B" stroke-width="1.5"/><path d="M1 4l9 6 9-6" stroke="#C8A84B" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <div class="csec-item-label">Email</div>
+            <div class="csec-item-val">info@grandiose-gastronomie.com</div>
+          </div>
+        </a>
+        <a href="https://wa.me/33649332713" target="_blank" class="csec-item">
+          <div class="csec-item-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div>
+            <div class="csec-item-label">WhatsApp</div>
+            <div class="csec-item-val">Réponse rapide 7j/7</div>
+          </div>
+        </a>
+      </div>
+      <div class="csec-col">
+        <div class="csec-col-title">Adresse</div>
+        <div class="csec-address">
+          <div class="csec-address-name">GRANDIOSE PARIS</div>
+          <div class="csec-address-line">58 rue de Monceau</div>
+          <div class="csec-address-line">75008 Paris, France</div>
+          <a href="https://www.grandioseparis.com" target="_blank" class="csec-website">
+            www.grandioseparis.com →
+          </a>
+        </div>
+      </div>
+      <div class="csec-col">
+        <div class="csec-col-title">Navigation</div>
+        <nav class="csec-nav">
+          <a href="#gm" class="csec-nav-link">La Maison</a>
+          <a href="#gc" class="csec-nav-link">Charcuterie d'Émotions</a>
+          <a href="#gl" class="csec-nav-link">Produits Tranchés</a>
+          <a href="#gvi" class="csec-nav-link">Viandes d'Exception</a>
+          <a href="#gv" class="csec-nav-link">Nos Volailles</a>
+        </nav>
+      </div>
+    </div>
+    <!-- BOTTOM BAR -->
+    <div class="csec-bottom">
+      <span>© 2025 Grandiose Paris · Tous droits réservés</span>
+      <span class="csec-bottom-sep">·</span>
+      <span>Catalogue Professionnel · Hôtellerie &amp; Restauration</span>
     </div>
   </div>
 </section>
